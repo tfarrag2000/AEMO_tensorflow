@@ -11,10 +11,11 @@ import itertools
 
 start_time = time.time()
 
-xls_file = pd.ExcelFile(r'C:\Users\T\OneDrive\My Research\Tamer_Ehab_STLF\Programs For Local Machine\The Datasets\AEMO\AEMO_NSLP_2014_2015_jan2016\All.xlsx')
-df = xls_file.parse('Sheet2')
+df= pd.DataFrame.from_csv(r'C:\Users\T\OneDrive\My Research\Tamer_Ehab_STLF\Programs For Local Machine\AEMO1_data.csv')
+
 #~~~~~~~~~~~~~~ Normalization from (-1 to 1) ~~~~~~~~~~~~
-OldData=df.loc[df['month'].isin([1,2,3,4,5,6,7,8,9,10,11,12])].values[:,7];
+#OldData=df.loc[df['month'].isin([1,2,3,4,5,6,7,8,9,10,11,12])].values[:,7];
+OldData=df
 MaxLoad  =np.amax(OldData,axis=0)
 MinLoad  =np.amin(OldData,axis=0)   
 OldData[:] = (2 *  (OldData[:] -MinLoad) /(MaxLoad-MinLoad))  -1
@@ -61,7 +62,7 @@ def input_fn(data_set):
   return feature_cols, labels
 
 
-regressor.fit(input_fn=lambda: input_fn(Train), steps=2000)
+regressor.fit(input_fn=lambda: input_fn(Train), steps=200)
 
 
 #ev = regressor.evaluate(input_fn=lambda: input_fn(Test), steps=1)
