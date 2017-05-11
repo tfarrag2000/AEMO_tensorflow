@@ -24,6 +24,35 @@
   <ItemGroup>
     <Compile Include="AEMO_tensorflow.py" />
   </ItemGroup>
+  <ItemGroup>
+    <Folder Include="model.ckpt\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="model.ckpt\checkpoint" />
+    <Content Include="model.ckpt\events.out.tfevents.1494207650.DRTAMERDELLNEW" />
+    <Content Include="model.ckpt\events.out.tfevents.1494207737.DRTAMERDELLNEW" />
+    <Content Include="model.ckpt\events.out.tfevents.1494207770.DRTAMERDELLNEW" />
+    <Content Include="model.ckpt\events.out.tfevents.1494209388.DRTAMERDELLNEW" />
+    <Content Include="model.ckpt\events.out.tfevents.1494213659.DRTAMERDELLNEW" />
+    <Content Include="model.ckpt\events.out.tfevents.1494219457.DRTAMERDELLNEW" />
+    <Content Include="model.ckpt\events.out.tfevents.1494334772.DRTAMERDELLNEW" />
+    <Content Include="model.ckpt\graph.pbtxt" />
+    <Content Include="model.ckpt\model.ckpt-1153.data-00000-of-00001" />
+    <Content Include="model.ckpt\model.ckpt-1153.index" />
+    <Content Include="model.ckpt\model.ckpt-1153.meta" />
+    <Content Include="model.ckpt\model.ckpt-1302.data-00000-of-00001" />
+    <Content Include="model.ckpt\model.ckpt-1302.index" />
+    <Content Include="model.ckpt\model.ckpt-1302.meta" />
+    <Content Include="model.ckpt\model.ckpt-1303.data-00000-of-00001" />
+    <Content Include="model.ckpt\model.ckpt-1303.index" />
+    <Content Include="model.ckpt\model.ckpt-1303.meta" />
+    <Content Include="model.ckpt\model.ckpt-1312.data-00000-of-00001" />
+    <Content Include="model.ckpt\model.ckpt-1312.index" />
+    <Content Include="model.ckpt\model.ckpt-1312.meta" />
+    <Content Include="model.ckpt\model.ckpt-903.data-00000-of-00001" />
+    <Content Include="model.ckpt\model.ckpt-903.index" />
+    <Content Include="model.ckpt\model.ckpt-903.meta" />
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <PtvsTargetsFile>$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets</PtvsTargetsFile>
