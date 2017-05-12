@@ -12,7 +12,7 @@ import itertools
 start_time = time.time()
 
 
-xls_file = pd.ExcelFile(r'C:\Users\T\OneDrive\My Research\Tamer_Ehab_STLF\Programs For Local Machine\AEMO1_data.xlsx')
+xls_file = pd.ExcelFile(r'The Data\AEMO1_data.xlsx')
 df = xls_file.parse('AEMO1_data')
 #~~~~~~~~~~~~~~ Normalization from (-1 to 1) ~~~~~~~~~~~~
 #OldData=df.loc[df['month'].isin([1,2,3,4,5,6,7,8,9,10,11,12])].values[:,7];
@@ -56,7 +56,7 @@ LABEL="Y"
 
 regressor = lr.DNNRegressor(
     feature_columns=[tf.contrib.layers.real_valued_column(k) for k in FEATURES],
-    hidden_units=[1024, 512, 256] , model_dir=r".\model5.ckpt" ) #1024, 512, 256 # model_dir="/tmp/The_model"
+    hidden_units=[1024, 512, 256] , model_dir=r".\model.ckpt" ) #1024, 512, 256 # model_dir="/tmp/The_model"
 
 # Input builders
 def input_fn(data_set):
@@ -67,7 +67,7 @@ def input_fn(data_set):
 
 
 
-regressor.fit(input_fn=lambda: input_fn(Train), steps=5000)
+regressor.fit(input_fn=lambda: input_fn(Train), steps=10000)
 
 
 #ev = regressor.evaluate(input_fn=lambda: input_fn(Test), steps=1)
